@@ -66,6 +66,7 @@ curl \
     --cookie-jar /tmp/cookie \
     --netrc \
     --location \
+    --ciphers DEFAULT@SECLEVEL=1 \
     --output "${RINEX_NAV_FILE}.gz" "https://cddis.nasa.gov/archive/gnss/data/daily/${year}/brdc/${RINEX_NAV_FILE}.gz" \
 uncompress --force --keep "${RINEX_NAV_FILE}.gz"
 ls -al "${RINEX_NAV_FILE}"
